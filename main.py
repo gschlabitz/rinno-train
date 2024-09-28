@@ -1,5 +1,6 @@
+import argparse
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 
 
 def aggregate_training_programs(completion_record):
@@ -126,46 +127,74 @@ def generate_expiration_report_by_date(training_records, expiration):
     return sorted(report, key=lambda x: x['name'])
 
 
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="""
+        Rinno Train is a reporting tool for training status of department
+        employees. It generates 3 report files:
+
+        completion_totals.json:
+        An index of all training programs and the total number of employees
+        that have completed them.
+        
+        completion_report_by_year.json:
+        An index of specified training programs, each with a list of all
+        employees who have completed the program during the specified
+        fiscal year.
+        
+        expiration_report_by_date.json:
+        A list of all employees who have training programs that have expired
+        or will expire within a month of the specified date.
+    """)
+
+    parser.add_argument('-i', '--input_file', type=str, required=True,
+                        help='Path to a training records JSON file.')
+
+    parser.add_argument('-x', '--expiration', type=str, required=True,
+                        help="""The expiration date for the expiration report 
+                        expressed in a quoted string in the format m/d/Y, 
+                        e.g. 2/29/2024.""")
+
+    parser.add_argument('-y', '--fiscal_year', type=int, required=True,
+                        help='The fiscal year for the completion report.')
+
+    parser.add_argument('program_filter', nargs='+', help='''The names of the
+                        training programs to include in the completion report.
+                        If no program names are specified, all programs will
+                        be included.''')
+
+    return parser.parse_args()
+
+
 def main():
-    # TODO: add paramter parsing
-    # Using hardcoded parameters for now
-    input_file = 'trainings.json'
-    training_program_queries = [
-        "Electrical Safety for Labs",
-        "X-Ray Safety",
-        "Laboratory Safety Training"
-    ]
-    fiscal_year = 2024
-    expiration_date = "10/1/2023"
+    args = parse_arguments()
 
     # Load training data from specified JSON file
     training_records = None
-    with open(input_file, 'r') as file:
+    with open(args.input_file, 'r') as file:
         training_records = json.load(file)
 
+    # Report 1: Count how many people have completed each training
     training_programs = aggregate_training_programs(training_records)
-
-    # Excercise 1: Count how many people have completed each training
     completion_totals = count_program_completions(
         training_programs, training_records)
 
     with open("completion_totals.json", 'w') as file:
         json.dump(completion_totals, file, indent=4, default=str)
 
-    # Excercise 2: List everyone that completed a given training
+    # Report 2: List everyone that completed a given training
     # in a given fiscal year
     completion_report_by_year = generate_completion_report_by_year(
-        training_records, fiscal_year, training_program_queries)
+        training_records, args.fiscal_year, args.program_filter or training_programs)
 
-    with open("completion_report_by_year.json", 'w') as file:
+    with open("completion_by_year.json", 'w') as file:
         json.dump(completion_report_by_year, file, indent=4, default=str)
 
-    # Excercise 3: List everyone whose training has expired or will expire
+    # Report 3: List everyone whose training has expired or will expire
     # within a month of a given date.
     expiration_report_by_date = generate_expiration_report_by_date(
-        training_records, expiration_date)
+        training_records, args.expiration)
 
-    with open("expiration_report_by_date.json", 'w') as file:
+    with open("expiration_by_date.json", 'w') as file:
         json.dump(expiration_report_by_date, file, indent=4, default=str)
 
 
