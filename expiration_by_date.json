@@ -73,13 +73,13 @@
         "name": "Adriana Figueroa",
         "expired_training": [
             {
-                "name": "Safety Practices and Procedures to Prevent Zoonotic Diseases While Working With Cattle",
-                "expiration": "6/12/2023",
+                "name": "Radioactive Materials Safety Training",
+                "expiration": "6/7/2023",
                 "status": "expired"
             },
             {
-                "name": "Radioactive Materials Safety Training",
-                "expiration": "6/7/2023",
+                "name": "Safety Practices and Procedures to Prevent Zoonotic Diseases While Working With Cattle",
+                "expiration": "6/12/2023",
                 "status": "expired"
             }
         ]
@@ -153,13 +153,13 @@
         "name": "Alexandra Schneider",
         "expired_training": [
             {
-                "name": "OHS Training",
-                "expiration": "3/27/2023",
+                "name": "Awareness Training for the Transport of Hazardous Material",
+                "expiration": "12/13/2022",
                 "status": "expired"
             },
             {
-                "name": "Awareness Training for the Transport of Hazardous Material",
-                "expiration": "12/13/2022",
+                "name": "OHS Training",
+                "expiration": "3/27/2023",
                 "status": "expired"
             }
         ]
@@ -168,13 +168,13 @@
         "name": "Alicia Mays",
         "expired_training": [
             {
-                "name": "OHS Training",
-                "expiration": "7/25/2023",
+                "name": "Transportation of Infectious Substances, Category B",
+                "expiration": "1/22/2023",
                 "status": "expired"
             },
             {
-                "name": "Transportation of Infectious Substances, Category B",
-                "expiration": "1/22/2023",
+                "name": "OHS Training",
+                "expiration": "7/25/2023",
                 "status": "expired"
             }
         ]
@@ -278,13 +278,13 @@
         "name": "Angel Hill",
         "expired_training": [
             {
-                "name": "Retraining in working with the IACUC",
-                "expiration": "7/25/2023",
+                "name": "DOT Hazard Material Awareness",
+                "expiration": "7/2/2023",
                 "status": "expired"
             },
             {
-                "name": "DOT Hazard Material Awareness",
-                "expiration": "7/2/2023",
+                "name": "Retraining in working with the IACUC",
+                "expiration": "7/25/2023",
                 "status": "expired"
             }
         ]
@@ -440,16 +440,6 @@
         ]
     },
     {
-        "name": "August Archer",
-        "expired_training": [
-            {
-                "name": "Animal Care And Use Risk Assessment",
-                "expiration": "7/9/2023",
-                "status": "expired"
-            }
-        ]
-    },
-    {
         "name": "Bailey Barrera",
         "expired_training": [
             {
@@ -588,13 +578,13 @@
         "name": "Bryan Cross",
         "expired_training": [
             {
-                "name": "Retraining in working with the IACUC",
-                "expiration": "8/23/2023",
+                "name": "Radiation Safety Annual Refresher",
+                "expiration": "4/21/2023",
                 "status": "expired"
             },
             {
-                "name": "Radiation Safety Annual Refresher",
-                "expiration": "4/21/2023",
+                "name": "Retraining in working with the IACUC",
+                "expiration": "8/23/2023",
                 "status": "expired"
             }
         ]
@@ -683,13 +673,13 @@
         "name": "Caylee Hatfield",
         "expired_training": [
             {
-                "name": "Federally Required RCR Training - Must be delivered by PI (Not available online)",
-                "expiration": "4/17/2023",
+                "name": "Medical Records",
+                "expiration": "2/14/2023",
                 "status": "expired"
             },
             {
-                "name": "Medical Records",
-                "expiration": "2/14/2023",
+                "name": "Federally Required RCR Training - Must be delivered by PI (Not available online)",
+                "expiration": "4/17/2023",
                 "status": "expired"
             }
         ]
@@ -815,16 +805,6 @@
         ]
     },
     {
-        "name": "Cooper Roberson",
-        "expired_training": [
-            {
-                "name": "Basic Training Program for Animal Users",
-                "expiration": "2/3/2023",
-                "status": "expired"
-            }
-        ]
-    },
-    {
         "name": "Crystal Middleton",
         "expired_training": [
             {
@@ -848,13 +828,13 @@
         "name": "Dakota Pierce",
         "expired_training": [
             {
-                "name": "Safety Practices and Procedures to Prevent Zoonotic Diseases While Working With Cattle",
-                "expiration": "9/15/2023",
+                "name": "Radioactive Materials Safety Training",
+                "expiration": "6/16/2023",
                 "status": "expired"
             },
             {
-                "name": "Radioactive Materials Safety Training",
-                "expiration": "6/16/2023",
+                "name": "Safety Practices and Procedures to Prevent Zoonotic Diseases While Working With Cattle",
+                "expiration": "9/15/2023",
                 "status": "expired"
             }
         ]
@@ -893,13 +873,13 @@
         "name": "Damon Gaines",
         "expired_training": [
             {
-                "name": "Working in Cold Temperatures",
-                "expiration": "7/3/2023",
+                "name": "OHS Training",
+                "expiration": "2/10/2023",
                 "status": "expired"
             },
             {
-                "name": "OHS Training",
-                "expiration": "2/10/2023",
+                "name": "Working in Cold Temperatures",
+                "expiration": "7/3/2023",
                 "status": "expired"
             }
         ]
@@ -928,13 +908,13 @@
         "name": "Daphne Hinton",
         "expired_training": [
             {
-                "name": "Laboratory Safety Training",
-                "expiration": "8/13/2023",
+                "name": "Safe Handling of Human Cell Lines/Materials in a Research Laboratory",
+                "expiration": "2/17/2023",
                 "status": "expired"
             },
             {
-                "name": "Safe Handling of Human Cell Lines/Materials in a Research Laboratory",
-                "expiration": "2/17/2023",
+                "name": "Laboratory Safety Training",
+                "expiration": "8/13/2023",
                 "status": "expired"
             },
             {
@@ -1038,13 +1018,13 @@
         "name": "Denise Allen",
         "expired_training": [
             {
-                "name": "Awareness Training for the Transport of Hazardous Material",
-                "expiration": "6/27/2023",
+                "name": "Understanding Biosafety",
+                "expiration": "1/29/2023",
                 "status": "expired"
             },
             {
-                "name": "Understanding Biosafety",
-                "expiration": "1/29/2023",
+                "name": "Awareness Training for the Transport of Hazardous Material",
+                "expiration": "6/27/2023",
                 "status": "expired"
             }
         ]
@@ -1100,16 +1080,6 @@
             {
                 "name": "Basic Training Program for Animal Users",
                 "expiration": "9/23/2023",
-                "status": "expired"
-            }
-        ]
-    },
-    {
-        "name": "Devon Bush",
-        "expired_training": [
-            {
-                "name": "Understanding Biosafety",
-                "expiration": "1/1/2023",
                 "status": "expired"
             }
         ]
@@ -1208,6 +1178,11 @@
         "name": "Emilia Gardner",
         "expired_training": [
             {
+                "name": "Chemical Waste Requirements",
+                "expiration": "1/15/2023",
+                "status": "expired"
+            },
+            {
                 "name": "DOT Hazard Material Awareness",
                 "expiration": "2/11/2023",
                 "status": "expired"
@@ -1215,11 +1190,6 @@
             {
                 "name": "Federally Required RCR Training - Must be delivered by PI (Not available online)",
                 "expiration": "9/7/2023",
-                "status": "expired"
-            },
-            {
-                "name": "Chemical Waste Requirements",
-                "expiration": "1/15/2023",
                 "status": "expired"
             },
             {
@@ -1253,18 +1223,13 @@
         "name": "Emmett Sanchez",
         "expired_training": [
             {
-                "name": "Basic Training Program for Animal Users",
-                "expiration": "6/4/2023",
+                "name": "Medical Records",
+                "expiration": "5/28/2023",
                 "status": "expired"
             },
             {
                 "name": "IRB Quiz",
                 "expiration": "7/12/2023",
-                "status": "expired"
-            },
-            {
-                "name": "Medical Records",
-                "expiration": "5/28/2023",
                 "status": "expired"
             }
         ]
@@ -1503,13 +1468,13 @@
         "name": "Gina Sexton",
         "expired_training": [
             {
-                "name": "Laboratory Safety Training",
-                "expiration": "9/1/2023",
+                "name": "Working in Cold Temperatures",
+                "expiration": "1/7/2023",
                 "status": "expired"
             },
             {
-                "name": "Working in Cold Temperatures",
-                "expiration": "1/7/2023",
+                "name": "Laboratory Safety Training",
+                "expiration": "9/1/2023",
                 "status": "expired"
             }
         ]
@@ -1538,11 +1503,6 @@
         "name": "Gisselle Hooper",
         "expired_training": [
             {
-                "name": "Working in Cold Temperatures",
-                "expiration": "5/4/2023",
-                "status": "expired"
-            },
-            {
                 "name": "Federally Required RCR Training - Must be delivered by PI (Not available online)",
                 "expiration": "4/7/2023",
                 "status": "expired"
@@ -1550,6 +1510,11 @@
             {
                 "name": "DOT Hazard Material Awareness",
                 "expiration": "4/27/2023",
+                "status": "expired"
+            },
+            {
+                "name": "Working in Cold Temperatures",
+                "expiration": "5/4/2023",
                 "status": "expired"
             }
         ]
@@ -1668,13 +1633,13 @@
         "name": "Immanuel Combs",
         "expired_training": [
             {
-                "name": "Awareness Training for the Transport of Hazardous Material",
-                "expiration": "5/6/2023",
+                "name": "X-Ray Safety",
+                "expiration": "2/19/2023",
                 "status": "expired"
             },
             {
-                "name": "X-Ray Safety",
-                "expiration": "2/19/2023",
+                "name": "Awareness Training for the Transport of Hazardous Material",
+                "expiration": "5/6/2023",
                 "status": "expired"
             }
         ]
@@ -1683,13 +1648,13 @@
         "name": "Iris Aguilar",
         "expired_training": [
             {
-                "name": "Electrical Safety for Labs",
-                "expiration": "2/19/2023",
+                "name": "Safe Handling of Human Cell Lines/Materials in a Research Laboratory",
+                "expiration": "1/4/2023",
                 "status": "expired"
             },
             {
-                "name": "Safe Handling of Human Cell Lines/Materials in a Research Laboratory",
-                "expiration": "1/4/2023",
+                "name": "Electrical Safety for Labs",
+                "expiration": "2/19/2023",
                 "status": "expired"
             }
         ]
@@ -1743,11 +1708,6 @@
         "name": "Jadon Villarreal",
         "expired_training": [
             {
-                "name": "Working in Cold Temperatures",
-                "expiration": "5/28/2023",
-                "status": "expired"
-            },
-            {
                 "name": "Understanding Biosafety",
                 "expiration": "8/19/2023",
                 "status": "expired"
@@ -1788,6 +1748,11 @@
         "name": "Jakobe Porter",
         "expired_training": [
             {
+                "name": "Occupational Exposure to Bloodborne Pathogens",
+                "expiration": "1/9/2023",
+                "status": "expired"
+            },
+            {
                 "name": "Working in Cold Temperatures",
                 "expiration": "2/25/2023",
                 "status": "expired"
@@ -1795,11 +1760,6 @@
             {
                 "name": "Transportation of Infectious Substances, Category B",
                 "expiration": "5/31/2023",
-                "status": "expired"
-            },
-            {
-                "name": "Occupational Exposure to Bloodborne Pathogens",
-                "expiration": "1/9/2023",
                 "status": "expired"
             }
         ]
@@ -1848,13 +1808,13 @@
         "name": "Janiyah Vaughan",
         "expired_training": [
             {
-                "name": "Using Hazardous Chemicals in an Animal Care Facility",
-                "expiration": "4/7/2023",
+                "name": "OHS Training",
+                "expiration": "12/22/2022",
                 "status": "expired"
             },
             {
-                "name": "OHS Training",
-                "expiration": "12/22/2022",
+                "name": "Using Hazardous Chemicals in an Animal Care Facility",
+                "expiration": "4/7/2023",
                 "status": "expired"
             }
         ]
@@ -1993,13 +1953,13 @@
         "name": "Jessie Odom",
         "expired_training": [
             {
-                "name": "X-Ray Safety",
-                "expiration": "9/21/2023",
+                "name": "Electrical Safety for Labs",
+                "expiration": "6/5/2023",
                 "status": "expired"
             },
             {
-                "name": "Electrical Safety for Labs",
-                "expiration": "6/5/2023",
+                "name": "X-Ray Safety",
+                "expiration": "9/21/2023",
                 "status": "expired"
             }
         ]
@@ -2008,13 +1968,13 @@
         "name": "John Montes",
         "expired_training": [
             {
-                "name": "Basic Training Program for Animal Users",
-                "expiration": "9/4/2023",
+                "name": "Radioactive Materials Safety Training",
+                "expiration": "3/15/2023",
                 "status": "expired"
             },
             {
-                "name": "Radioactive Materials Safety Training",
-                "expiration": "3/15/2023",
+                "name": "Basic Training Program for Animal Users",
+                "expiration": "9/4/2023",
                 "status": "expired"
             }
         ]
@@ -2073,13 +2033,13 @@
         "name": "Julianna York",
         "expired_training": [
             {
-                "name": "Retraining in working with the IACUC",
-                "expiration": "5/5/2023",
+                "name": "Radioactive Materials Safety Training",
+                "expiration": "2/12/2023",
                 "status": "expired"
             },
             {
-                "name": "Radioactive Materials Safety Training",
-                "expiration": "2/12/2023",
+                "name": "Retraining in working with the IACUC",
+                "expiration": "5/5/2023",
                 "status": "expired"
             }
         ]
@@ -2088,13 +2048,13 @@
         "name": "Julien Terrell",
         "expired_training": [
             {
-                "name": "IRB Quiz",
-                "expiration": "3/30/2023",
+                "name": "Transportation of Infectious Substances, Category B",
+                "expiration": "2/23/2023",
                 "status": "expired"
             },
             {
-                "name": "Transportation of Infectious Substances, Category B",
-                "expiration": "2/23/2023",
+                "name": "IRB Quiz",
+                "expiration": "3/30/2023",
                 "status": "expired"
             }
         ]
@@ -2138,13 +2098,13 @@
         "name": "Kaila Knapp",
         "expired_training": [
             {
-                "name": "Health Screening Questionnaire",
-                "expiration": "9/14/2023",
+                "name": "Medical Records",
+                "expiration": "6/14/2023",
                 "status": "expired"
             },
             {
-                "name": "Medical Records",
-                "expiration": "6/14/2023",
+                "name": "Health Screening Questionnaire",
+                "expiration": "9/14/2023",
                 "status": "expired"
             }
         ]
@@ -2168,13 +2128,13 @@
         "name": "Kaitlyn Orozco",
         "expired_training": [
             {
-                "name": "Using Hazardous Chemicals in an Animal Care Facility",
-                "expiration": "4/18/2023",
+                "name": "Radiation Safety Annual Refresher",
+                "expiration": "1/12/2023",
                 "status": "expired"
             },
             {
-                "name": "Radiation Safety Annual Refresher",
-                "expiration": "1/12/2023",
+                "name": "Using Hazardous Chemicals in an Animal Care Facility",
+                "expiration": "4/18/2023",
                 "status": "expired"
             }
         ]
@@ -2263,13 +2223,13 @@
         "name": "Kennedi Wolf",
         "expired_training": [
             {
-                "name": "Retraining in working with the IACUC",
-                "expiration": "3/9/2023",
+                "name": "Radiation Safety Annual Refresher",
+                "expiration": "2/8/2023",
                 "status": "expired"
             },
             {
-                "name": "Basic Training Program for Animal Users",
-                "expiration": "9/11/2023",
+                "name": "Retraining in working with the IACUC",
+                "expiration": "3/9/2023",
                 "status": "expired"
             },
             {
@@ -2278,8 +2238,8 @@
                 "status": "expired"
             },
             {
-                "name": "Radiation Safety Annual Refresher",
-                "expiration": "2/8/2023",
+                "name": "Basic Training Program for Animal Users",
+                "expiration": "9/11/2023",
                 "status": "expired"
             }
         ]
@@ -2478,6 +2438,11 @@
         "name": "Liberty Miles",
         "expired_training": [
             {
+                "name": "Understanding Biosafety",
+                "expiration": "4/21/2023",
+                "status": "expired"
+            },
+            {
                 "name": "Retraining in working with the IACUC",
                 "expiration": "5/27/2023",
                 "status": "expired"
@@ -2485,11 +2450,6 @@
             {
                 "name": "X-Ray Safety",
                 "expiration": "7/8/2023",
-                "status": "expired"
-            },
-            {
-                "name": "Understanding Biosafety",
-                "expiration": "4/21/2023",
                 "status": "expired"
             }
         ]
@@ -2553,13 +2513,13 @@
         "name": "Livia Hayes",
         "expired_training": [
             {
-                "name": "Federally Required RCR Training - Must be delivered by PI (Not available online)",
-                "expiration": "7/17/2023",
+                "name": "Understanding Biosafety",
+                "expiration": "12/21/2022",
                 "status": "expired"
             },
             {
-                "name": "Understanding Biosafety",
-                "expiration": "12/21/2022",
+                "name": "Federally Required RCR Training - Must be delivered by PI (Not available online)",
+                "expiration": "7/17/2023",
                 "status": "expired"
             }
         ]
@@ -2593,6 +2553,11 @@
         "name": "Louis Burnett",
         "expired_training": [
             {
+                "name": "Medical Records",
+                "expiration": "5/5/2023",
+                "status": "expired"
+            },
+            {
                 "name": "Basic Training Program for Animal Users",
                 "expiration": "5/31/2023",
                 "status": "expired"
@@ -2600,11 +2565,6 @@
             {
                 "name": "Federally Required RCR Training - Must be delivered by PI (Not available online)",
                 "expiration": "7/10/2023",
-                "status": "expired"
-            },
-            {
-                "name": "Medical Records",
-                "expiration": "5/5/2023",
                 "status": "expired"
             }
         ]
@@ -2645,11 +2605,6 @@
             {
                 "name": "Understanding Biosafety",
                 "expiration": "9/2/2023",
-                "status": "expired"
-            },
-            {
-                "name": "Animal Care And Use Risk Assessment",
-                "expiration": "1/23/2023",
                 "status": "expired"
             }
         ]
@@ -2693,13 +2648,13 @@
         "name": "Madisyn Wiggins",
         "expired_training": [
             {
-                "name": "Medical Records",
-                "expiration": "2/16/2023",
+                "name": "Health Screening Questionnaire",
+                "expiration": "12/24/2022",
                 "status": "expired"
             },
             {
-                "name": "Health Screening Questionnaire",
-                "expiration": "12/24/2022",
+                "name": "Medical Records",
+                "expiration": "2/16/2023",
                 "status": "expired"
             }
         ]
@@ -2743,13 +2698,13 @@
         "name": "Mara Holland",
         "expired_training": [
             {
-                "name": "Electrical Safety for Labs",
-                "expiration": "4/4/2023",
+                "name": "Safe Handling of Human Cell Lines/Materials in a Research Laboratory",
+                "expiration": "12/14/2022",
                 "status": "expired"
             },
             {
-                "name": "Safe Handling of Human Cell Lines/Materials in a Research Laboratory",
-                "expiration": "12/14/2022",
+                "name": "Electrical Safety for Labs",
+                "expiration": "4/4/2023",
                 "status": "expired"
             }
         ]
@@ -2798,6 +2753,11 @@
         "name": "Marisol Cooper",
         "expired_training": [
             {
+                "name": "Animal Care And Use Risk Assessment",
+                "expiration": "4/13/2023",
+                "status": "expired"
+            },
+            {
                 "name": "X-Ray Safety",
                 "expiration": "5/10/2023",
                 "status": "expired"
@@ -2805,11 +2765,6 @@
             {
                 "name": "Safety Practices and Procedures to Prevent Zoonotic Diseases While Working With Cattle",
                 "expiration": "5/23/2023",
-                "status": "expired"
-            },
-            {
-                "name": "Animal Care And Use Risk Assessment",
-                "expiration": "4/13/2023",
                 "status": "expired"
             }
         ]
@@ -2893,13 +2848,13 @@
         "name": "Martin Dean",
         "expired_training": [
             {
-                "name": "Physical Science Responsible Conduct of Research Course 1.",
-                "expiration": "4/16/2023",
+                "name": "Transportation of Infectious Substances, Category B",
+                "expiration": "3/11/2023",
                 "status": "expired"
             },
             {
-                "name": "Transportation of Infectious Substances, Category B",
-                "expiration": "3/11/2023",
+                "name": "Physical Science Responsible Conduct of Research Course 1.",
+                "expiration": "4/16/2023",
                 "status": "expired"
             },
             {
@@ -2960,16 +2915,6 @@
         ]
     },
     {
-        "name": "Mckenna Sanders",
-        "expired_training": [
-            {
-                "name": "Using Hazardous Chemicals in an Animal Care Facility",
-                "expiration": "6/20/2023",
-                "status": "expired"
-            }
-        ]
-    },
-    {
         "name": "Melanie Bennett",
         "expired_training": [
             {
@@ -3010,16 +2955,6 @@
         ]
     },
     {
-        "name": "Mia Pacheco",
-        "expired_training": [
-            {
-                "name": "OHS Training",
-                "expiration": "1/11/2023",
-                "status": "expired"
-            }
-        ]
-    },
-    {
         "name": "Miah Burnett",
         "expired_training": [
             {
@@ -3033,13 +2968,13 @@
         "name": "Micah Barrera",
         "expired_training": [
             {
-                "name": "Understanding Biosafety",
-                "expiration": "8/8/2023",
+                "name": "Chemical Waste Requirements",
+                "expiration": "7/20/2023",
                 "status": "expired"
             },
             {
-                "name": "Chemical Waste Requirements",
-                "expiration": "7/20/2023",
+                "name": "Understanding Biosafety",
+                "expiration": "8/8/2023",
                 "status": "expired"
             }
         ]
@@ -3068,13 +3003,13 @@
         "name": "Milagros Montes",
         "expired_training": [
             {
-                "name": "IRB Quiz",
-                "expiration": "8/21/2023",
+                "name": "Federally Required RCR Training - Must be delivered by PI (Not available online)",
+                "expiration": "2/19/2023",
                 "status": "expired"
             },
             {
-                "name": "Federally Required RCR Training - Must be delivered by PI (Not available online)",
-                "expiration": "2/19/2023",
+                "name": "IRB Quiz",
+                "expiration": "8/21/2023",
                 "status": "expired"
             }
         ]
@@ -3215,16 +3150,6 @@
         ]
     },
     {
-        "name": "Nayeli Ortiz",
-        "expired_training": [
-            {
-                "name": "X-Ray Safety",
-                "expiration": "2/25/2023",
-                "status": "expired"
-            }
-        ]
-    },
-    {
         "name": "Nikhil Henderson",
         "expired_training": [
             {
@@ -3293,13 +3218,13 @@
         "name": "Nyla Rose",
         "expired_training": [
             {
-                "name": "X-Ray Safety",
-                "expiration": "2/15/2023",
+                "name": "Transportation of Infectious Substances, Category B",
+                "expiration": "1/27/2023",
                 "status": "expired"
             },
             {
-                "name": "Transportation of Infectious Substances, Category B",
-                "expiration": "1/27/2023",
+                "name": "X-Ray Safety",
+                "expiration": "2/15/2023",
                 "status": "expired"
             }
         ]
@@ -3350,16 +3275,6 @@
             {
                 "name": "Retraining in working with the IACUC",
                 "expiration": "9/15/2023",
-                "status": "expired"
-            }
-        ]
-    },
-    {
-        "name": "Rayan Curry",
-        "expired_training": [
-            {
-                "name": "Safe Handling of Human Cell Lines/Materials in a Research Laboratory",
-                "expiration": "1/7/2023",
                 "status": "expired"
             }
         ]
@@ -3488,13 +3403,13 @@
         "name": "Rolando Schmitt",
         "expired_training": [
             {
-                "name": "Laboratory Safety Training",
-                "expiration": "4/18/2023",
+                "name": "Using Hazardous Chemicals in an Animal Care Facility",
+                "expiration": "3/15/2023",
                 "status": "expired"
             },
             {
-                "name": "Using Hazardous Chemicals in an Animal Care Facility",
-                "expiration": "3/15/2023",
+                "name": "Laboratory Safety Training",
+                "expiration": "4/18/2023",
                 "status": "expired"
             }
         ]
@@ -3528,13 +3443,13 @@
                 "status": "expired"
             },
             {
-                "name": "Awareness Training for the Transport of Hazardous Material",
-                "expiration": "4/8/2023",
+                "name": "OHS Training",
+                "expiration": "3/13/2023",
                 "status": "expired"
             },
             {
-                "name": "OHS Training",
-                "expiration": "3/13/2023",
+                "name": "Awareness Training for the Transport of Hazardous Material",
+                "expiration": "4/8/2023",
                 "status": "expired"
             }
         ]
@@ -3561,16 +3476,6 @@
                 "name": "Radiation Safety Annual Refresher",
                 "expiration": "10/31/2023",
                 "status": "expires soon"
-            }
-        ]
-    },
-    {
-        "name": "Saige Mcdonald",
-        "expired_training": [
-            {
-                "name": "Transportation of Infectious Substances, Category B",
-                "expiration": "2/2/2023",
-                "status": "expired"
             }
         ]
     },
@@ -3683,11 +3588,6 @@
         "name": "Tamara Livingston",
         "expired_training": [
             {
-                "name": "Laboratory Safety Training",
-                "expiration": "4/26/2023",
-                "status": "expired"
-            },
-            {
                 "name": "Safety Practices and Procedures to Prevent Zoonotic Diseases While Working With Cattle",
                 "expiration": "7/23/2023",
                 "status": "expired"
@@ -3743,13 +3643,13 @@
         "name": "Tiana Barron",
         "expired_training": [
             {
-                "name": "Working in Cold Temperatures",
-                "expiration": "4/4/2023",
+                "name": "Retraining in working with the IACUC",
+                "expiration": "3/12/2023",
                 "status": "expired"
             },
             {
-                "name": "Retraining in working with the IACUC",
-                "expiration": "3/12/2023",
+                "name": "Working in Cold Temperatures",
+                "expiration": "4/4/2023",
                 "status": "expired"
             }
         ]
@@ -3848,13 +3748,13 @@
         "name": "Vance Stout",
         "expired_training": [
             {
-                "name": "Transportation of Infectious Substances, Category B",
-                "expiration": "7/10/2023",
+                "name": "Safety Practices and Procedures to Prevent Zoonotic Diseases While Working With Cattle",
+                "expiration": "1/1/2023",
                 "status": "expired"
             },
             {
-                "name": "Safety Practices and Procedures to Prevent Zoonotic Diseases While Working With Cattle",
-                "expiration": "1/1/2023",
+                "name": "Transportation of Infectious Substances, Category B",
+                "expiration": "7/10/2023",
                 "status": "expired"
             }
         ]
@@ -3883,13 +3783,13 @@
         "name": "Wayne Howell",
         "expired_training": [
             {
-                "name": "X-Ray Safety",
-                "expiration": "6/10/2023",
+                "name": "Chemical Waste Requirements",
+                "expiration": "12/13/2022",
                 "status": "expired"
             },
             {
-                "name": "Chemical Waste Requirements",
-                "expiration": "12/13/2022",
+                "name": "X-Ray Safety",
+                "expiration": "6/10/2023",
                 "status": "expired"
             }
         ]
@@ -3993,6 +3893,11 @@
         "name": "Zion Werner",
         "expired_training": [
             {
+                "name": "Medical Records",
+                "expiration": "12/11/2022",
+                "status": "expired"
+            },
+            {
                 "name": "OHS Training",
                 "expiration": "1/21/2023",
                 "status": "expired"
@@ -4000,11 +3905,6 @@
             {
                 "name": "Safe Handling of Human Cell Lines/Materials in a Research Laboratory",
                 "expiration": "6/2/2023",
-                "status": "expired"
-            },
-            {
-                "name": "Medical Records",
-                "expiration": "12/11/2022",
                 "status": "expired"
             }
         ]

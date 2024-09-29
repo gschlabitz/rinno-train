@@ -64,9 +64,50 @@ def generate_completion_report_by_year(training_records, fiscal_year, program_fi
     return report
 
 
-def index_expired_programs(completions, expiration_date, expires_in_days=0):
+def index_expired_programs(completions, expiration_date):
+    # create a program index with the most recent expiration date as the value
     most_recent_expired = {}
+
+    # sort completions by expiration date from oldest to newest, so if
+    # the last completion is not expired, it will remove the program
+    # from the index
+    sorted_completions = sorted(
+        filter(lambda x: x.get('expires'), completions),
+        key=lambda x: date_from_string(x['expires'])
+    )
+
+    for completion in sorted_completions:
+        # validate the completion data
+        program = completion.get('name')
+        if not program:
+            continue
+
+        expiration = date_from_string(completion.get('expires'))
+        if not expiration:
+            continue
+
+        if expiration < expiration_date:
+            if program in most_recent_expired:
+                # a program can be completed multiple times
+                # make sure to use the most recent expiration date for the index
+                most_recent = date_from_string(most_recent_expired[program])
+                if expiration > most_recent:
+                    most_recent_expired[program] = completion['expires']
+            else:
+                most_recent_expired[program] = completion['expires']
+        elif program in most_recent_expired:
+            # if program was previously expired, but there is a newer
+            # completion that is mot expired, remove the program from index
+            del most_recent_expired[program]
+
+    return most_recent_expired
+
+
+def index_expiring_programs(completions, expiration_date, expires_in_days):
+    # create a program index with programs that expire within n days
+    expiring_soon = {}
     for completion in completions:
+        # validate the completion data
         program = completion.get('name')
         if not program:
             continue
@@ -76,17 +117,10 @@ def index_expired_programs(completions, expiration_date, expires_in_days=0):
             continue
 
         delta = expiration - expiration_date
-        is_expired = delta.days < 0 and expires_in_days == 0
-        expires_soon = expires_in_days > 0 and delta.days >= 0 and delta.days <= expires_in_days
-        if is_expired or expires_soon:
-            if program in most_recent_expired:
-                most_recent = date_from_string(most_recent_expired[program])
-                if expiration > most_recent:
-                    most_recent_expired[program] = completion['expires']
-            else:
-                most_recent_expired[program] = completion['expires']
+        if delta.days >= 0 and delta.days <= expires_in_days:
+            expiring_soon[program] = completion['expires']
 
-    return most_recent_expired
+    return expiring_soon
 
 
 def generate_expiration_report_by_date(training_records, expiration):
@@ -96,14 +130,11 @@ def generate_expiration_report_by_date(training_records, expiration):
         if 'completions' not in record:
             continue
 
-        entry = {'name': record['name']}
-
-        expired_programs = index_expired_programs(
-            record['completions'], expiration_date)
-        programs_expiring_next_month = index_expired_programs(
-            record['completions'], expiration_date, 30)
-
         programs = []
+        expired_programs = index_expired_programs(
+            record['completions'],
+            expiration_date
+        )
         for program in expired_programs:
             programs.append({
                 'name': program,
@@ -111,6 +142,11 @@ def generate_expiration_report_by_date(training_records, expiration):
                 'status': 'expired'
             })
 
+        programs_expiring_next_month = index_expiring_programs(
+            record['completions'],
+            expiration_date,
+            30
+        )
         for program in programs_expiring_next_month:
             programs.append({
                 'name': program,
