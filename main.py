@@ -3,36 +3,96 @@ import json
 from datetime import datetime
 
 
-def aggregate_training_programs(completion_record):
+def aggregate_training_programs(training_records):
+    '''
+    Iterates over all training records and returns a list of 
+    unique names of all training programs.
+
+    Parameters:
+        training_records (list): list of training records in the
+        form of: {
+            'name': 'employee (string)', 
+            'completions': [
+                {'name': 'training program name (string)'}
+            ]
+        }
+
+    Returns:
+        list: list of unique training program names sorted alphabetically
+    '''
     names = set()
-    for record in completion_record:
-        if 'completions' in record:
-            for completion in record['completions']:
-                if 'name' in completion:
-                    names.add(completion['name'])
+    for record in training_records:
+        for completion in record.get('completions', []):
+            name = completion.get('name')
+            if name:
+                names.add(completion['name'])
 
     return sorted(list(names))
 
 
 def has_completed_training_program(program_name, completion_records):
+    '''
+    Returns True if specified program is found within the completion records.
+
+    Parameters:
+        completion_records (list): list of completions in the
+        form of: {'name': 'training program name (string)', ...}
+
+    Returns:
+        True: program was found
+        False: program was not found
+    '''
     for completion in completion_records:
-        if 'name' in completion and completion['name'] == program_name:
+        if completion.get('name') == program_name:
             return True
     return False
 
 
 def count_program_completions(training_programs, training_records):
+    '''
+    Given a list of training program names, count how many employees have
+    completed the training program at least once.
+
+    Parameters:
+        training_programs (list): list of training program names
+        training_records (list): list of training records in the
+        form of: {
+            'name': 'employee (string)', 
+            'completions': [
+                {'name': 'training program name (string)'}
+            ]
+        }
+
+    Returns:
+        dict: index of training program names and the number of employees 
+        who have completed it 
+    '''
     totals = {}
     for program in training_programs:
         totals[program] = 0
         for record in training_records:
-            if 'completions' in record:
-                if has_completed_training_program(program, record['completions']):
-                    totals[program] += 1
+            if has_completed_training_program(
+                program,
+                record.get('completions', [])
+            ):
+                totals[program] += 1
     return totals
 
 
 def date_from_string(date_string):
+    '''
+    Converts a date string in the format m/d/yyyy to a datetime object.
+    The date format is specific to the deparment records and can not be 
+    configured.
+
+    Parameters:
+        date_string (str): date string, e.g. '2/29/2024'
+
+    Returns:
+        datetime: datetime object
+        None: if the date could not be parsed
+    '''
+
     try:
         return datetime.strptime(date_string, '%m/%d/%Y')
     except:
@@ -40,23 +100,63 @@ def date_from_string(date_string):
 
 
 def is_within_fiscal_year(fiscal_year, timestamp):
+    '''
+    Returns True if the timestamp is within the specified fiscal year.
+
+    Parameters:
+        fiscal_year (int): year in the format yyyy
+        timestamp (str): date string in the format m/d/yyyy
+
+    Returns:
+        True: timestamp is within the specified fiscal year
+        False: timestamp is not within the specified fiscal year
+    '''
+    completion_date = date_from_string(timestamp)
+    if not fiscal_year or not completion_date:
+        return False
+
     fiscal_year_start = datetime(fiscal_year-1, 7, 1)
     fiscal_year_end = datetime(fiscal_year, 6, 30)
-    completion_date = date_from_string(timestamp)
 
     return fiscal_year_start <= completion_date <= fiscal_year_end
 
 
-def generate_completion_report_by_year(training_records, fiscal_year, program_filter):
+def generate_completion_report_by_year(
+        training_records, fiscal_year, program_filter):
+    '''
+    Given a list of training records and a fiscal year, generate a report
+    of all employees who have completed the specified training programs within
+    the specified fiscal year.
+
+    Parameters:
+        training_records (list): list of training records in the
+        form of: {
+            'name': 'employee (string)', 
+            'completions': [
+                {
+                    'name': 'training program name (string)'
+                    'timestamp': 'date string in the format m/d/yyyy'
+                }
+            ]
+        }
+        fiscal_year (int): year in the format yyyy
+        program_filter (list): list of training program names
+
+    Returns:
+        dict: index of training program names and the list of employees 
+        who have completed it
+    '''
     report = {}
     for program in program_filter:
         report[program] = []
         for record in training_records:
-            if 'completions' in record:
-                for completion in record['completions']:
-                    if 'name' in completion and completion['name'] == program:
-                        if is_within_fiscal_year(fiscal_year, completion['timestamp']):
-                            report[program].append(record['name'])
+            for completion in record.get('completions', []):
+                if completion.get('name') == program:
+                    if is_within_fiscal_year(
+                        fiscal_year,
+                        completion['timestamp']
+                    ):
+                        report[program].append(record['name'])
 
         # sort and deduplicate aggregated people
         report[program] = sorted(list(set(report[program])))
@@ -65,12 +165,27 @@ def generate_completion_report_by_year(training_records, fiscal_year, program_fi
 
 
 def index_expired_programs(completions, expiration_date):
+    '''
+    Given a list of completions and an expiration date, return a list of
+    programs that have expired.
+
+    Parameters:
+        completions (list): list of completions in the
+        form of: {
+            'name': 'training program name (string)', 
+            'expires': 'date string in the format m/d/yyyy'
+        }
+        expiration_date (str): date string in the format m/d/yyyy
+
+    Returns:
+        dict: index of training program names and their expiration date
+    '''
     # create a program index with the most recent expiration date as the value
     most_recent_expired = {}
 
     # sort completions by expiration date from oldest to newest, so if
     # the last completion is not expired, it will remove the program
-    # from the index
+    # from the index. Also, ignore programs that can't expire.
     sorted_completions = sorted(
         filter(lambda x: x.get('expires'), completions),
         key=lambda x: date_from_string(x['expires'])
@@ -96,7 +211,7 @@ def index_expired_programs(completions, expiration_date):
             else:
                 most_recent_expired[program] = completion['expires']
         elif program in most_recent_expired:
-            # if program was previously expired, but there is a newer
+            # if program was previously indexed as expired, but there is a newer
             # completion that is mot expired, remove the program from index
             del most_recent_expired[program]
 
@@ -104,6 +219,25 @@ def index_expired_programs(completions, expiration_date):
 
 
 def index_expiring_programs(completions, expiration_date, expires_in_days):
+    '''
+    Given a list of completions and an expiration date, return a list of
+    programs that expire within the specified number of days.
+
+    Note: An assumption is made, that the expiration date will be in the future,
+    as looking for possible future expirations in the past is not useful.
+
+    Parameters:
+        completions (list): list of completions in the
+        form of: {
+            'name': 'training program name (string)', 
+            'expires': 'date string in the format m/d/yyyy'
+        }
+        expiration_date (str): date string in the format m/d/yyyy
+        expires_in_days (int): time period in which experiation occurs
+
+    Returns:
+        dict: index of training program names and their expiration date
+    '''
     # create a program index with programs that expire within n days
     expiring_soon = {}
     for completion in completions:
@@ -124,6 +258,37 @@ def index_expiring_programs(completions, expiration_date, expires_in_days):
 
 
 def generate_expiration_report_by_date(training_records, expiration):
+    '''
+    Given a list of training records and an expiration date, generates
+    a list of employees with training programs that have expired or will
+    expire within the specified number of days.
+    The distinction between expired programs and programs expiring soon is
+    indicated by the 'status' field in the returned list.
+
+    Parameters:
+        training_records (list): list of training records in the
+        form of: {
+            'name': 'employee (string)', 
+            'completions': [
+                {
+                    'name': 'training program name (string)', 
+                    'expires': 'date string in the format m/d/yyyy'
+                }
+            ]
+        }
+
+    Returns:
+        list: list of employees in the form: {
+            'name': 'employee (string)',
+            'expired_training': [
+                {
+                    'name': 'training program name (string)',
+                    'expiration': 'date string in the format m/d/yyyy',
+                    'status': 'expired' | 'expires soon'
+                }
+            ]
+        }
+    '''
     expiration_date = date_from_string(expiration)
     report = []
     for record in training_records:

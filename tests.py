@@ -77,6 +77,7 @@ class TestIsWithinFiscalYear(unittest.TestCase):
         self.assertFalse(is_within_fiscal_year(2024, '6/30/2023'))
         self.assertFalse(is_within_fiscal_year(2024, '7/2/2024'))
         self.assertFalse(is_within_fiscal_year(2024, '10/10/2024'))
+        self.assertFalse(is_within_fiscal_year(2024, 'bloop'))
 
 
 class TestGenerateCompletionReportByYear(unittest.TestCase):
