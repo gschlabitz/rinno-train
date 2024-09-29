@@ -27,7 +27,7 @@ To generate reports with default values (all programs as of today), run:
 python main.py -i trainings.json
 ```
 
-### Example
+### Configuration Example
 - report 1: can't be customized
 - report 2: fiscal year 2024 and only consider the programs "Electrical Safety for Labs", "X-Ray Safety", "Laboratory Safety Training"
 - report 3: expiration date of Oct 1st, 2023
@@ -36,7 +36,7 @@ python main.py -i trainings.json
 python main.py --input trainings.json --fiscal_year 2024 --expiration "10/1/2023" "Electrical Safety for Labs" "X-Ray Safety" "Laboratory Safety Training"
 ```
 
-Same Example using short form: 
+Same example using short form: 
 ```
 python main.py -i trainings.json -y 2024 -x "10/1/2023" "Electrical Safety for Labs" "X-Ray Safety" "Laboratory Safety Training"
 ```
